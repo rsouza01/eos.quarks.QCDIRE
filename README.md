@@ -1,2 +1,2 @@
-# mftqcd.eos
-Stuff related to Mean Field Theory of QCD Equation of State.
+# qcd.ire.eos
+QCD Infrared Renormalizable Extension EoS
