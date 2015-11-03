@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     36663,        945]
-NotebookOptionsPosition[     34763,        882]
-NotebookOutlinePosition[     35099,        897]
-CellTagsIndexPosition[     35056,        894]
+NotebookDataLength[     35238,        903]
+NotebookOptionsPosition[     33329,        841]
+NotebookOutlinePosition[     33901,        862]
+CellTagsIndexPosition[     33858,        859]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -32,41 +32,21 @@ arredondamento. (Ver an\[AAcute]lise abaixo.)\
  CellChangeTimes->{{3.655208853824181*^9, 3.655208918484508*^9}, {
   3.655209515494245*^9, 3.6552095307220592`*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[{
- RowBox[{"Nc", "=", "3"}], "\[IndentingNewLine]", 
- RowBox[{"Nf", "=", "2"}], "\[IndentingNewLine]", 
- RowBox[{"M3", "=", 
-  RowBox[{"196", "/", "1000"}]}], "\[IndentingNewLine]", 
- RowBox[{"m2", "=", 
-  RowBox[{"639", "/", "1000"}]}], "\[IndentingNewLine]", 
- RowBox[{"MPrime", "=", 
-  RowBox[{"14", "/", "1000"}]}]}], "Input"],
-
-Cell[BoxData["3"], "Output",
- CellChangeTimes->{3.655203499527527*^9, 3.655204765163509*^9, 
-  3.655208829210526*^9}],
-
-Cell[BoxData["2"], "Output",
- CellChangeTimes->{3.655203499527527*^9, 3.655204765163509*^9, 
-  3.655208829211791*^9}],
-
-Cell[BoxData[
- FractionBox["49", "250"]], "Output",
- CellChangeTimes->{3.655203499527527*^9, 3.655204765163509*^9, 
-  3.655208829212695*^9}],
-
-Cell[BoxData[
- FractionBox["639", "1000"]], "Output",
- CellChangeTimes->{3.655203499527527*^9, 3.655204765163509*^9, 
-  3.655208829213489*^9}],
-
-Cell[BoxData[
- FractionBox["7", "500"]], "Output",
- CellChangeTimes->{3.655203499527527*^9, 3.655204765163509*^9, 
-  3.655208829214271*^9}]
-}, Open  ]],
+ RowBox[{
+  RowBox[{"Nc", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Nf", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M3", "=", 
+   RowBox[{"196", "/", "1000"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m2", "=", 
+   RowBox[{"639", "/", "1000"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"MPrime", "=", 
+   RowBox[{"14", "/", "1000"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.655567318713634*^9, 3.655567321563931*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -89,45 +69,36 @@ Cell[BoxData[{
   RowBox[{"NIntegrate", "[", 
    RowBox[{
     RowBox[{
-     RowBox[{"1", "/", 
+     RowBox[{"(", 
       RowBox[{
-       RowBox[{"(", 
-        RowBox[{"2", "*", "Pi"}], ")"}], "^", "3"}]}], "*", 
+       FractionBox["1", 
+        SuperscriptBox["\[Pi]", "3"]], "*", "Nc", "*", "Nf"}], ")"}], "*", 
      RowBox[{"(", 
-      RowBox[{"4", "*", "Pi"}], ")"}], "*", 
-     RowBox[{"p", "^", "2"}], "*", 
-     RowBox[{"(", 
-      RowBox[{"2", "*", "Nc", "*", "Nf", "*", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"1", "/", "2"}], "/", "Pi"}], ")"}], "*", 
-       RowBox[{"(", "2", ")"}], "*", 
+      RowBox[{
        RowBox[{"Log", "[", 
         RowBox[{"Abs", "[", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{"Omega2", "[", 
-             RowBox[{
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{
-                 RowBox[{"I", "*", "\[Theta]"}], "+", "mu"}], ")"}], "^", 
-               "2"}], ",", "p", ",", "mp"}], "]"}], "-", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"Omega2", "[", 
             RowBox[{
-             RowBox[{"(", 
-              RowBox[{
-               RowBox[{"I", "*", "\[Theta]"}], "+", "mu"}], ")"}], "^", 
-             "2"}]}], ")"}], "/", 
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{"Omega2", "[", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"\[ImaginaryI]", "*", "\[Theta]"}], "+", "mu"}], 
+               ")"}], "2"], ",", "p", ",", "mp"}], "]"}], "-", 
+           SuperscriptBox[
+            RowBox[{"(", 
              RowBox[{
-              RowBox[{"-", 
-               RowBox[{"\[Theta]", "^", "2"}]}], ",", "p", ",", "mp"}], "]"}],
-             "+", 
-            RowBox[{"\[Theta]", "^", "2"}]}], ")"}]}], "]"}], "]"}]}], 
-      ")"}]}], ",", 
+              RowBox[{"\[ImaginaryI]", "*", "\[Theta]"}], "+", "mu"}], ")"}], 
+            "2"]}], 
+          RowBox[{
+           RowBox[{"Omega2", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[Theta]", "2"]}], ",", "p", ",", "mp"}], "]"}],
+            "+", 
+           SuperscriptBox["\[Theta]", "2"]}]], "]"}], "]"}], "*", 
+       SuperscriptBox["p", "2"]}], ")"}]}], ",", 
     RowBox[{"{", 
      RowBox[{"\[Theta]", ",", "0", ",", "Infinity"}], "}"}], ",", 
     RowBox[{"{", 
@@ -141,7 +112,8 @@ Cell[BoxData[{
       RowBox[{"GlobalAdaptive", ",", 
        RowBox[{"MaxErrorIncreases", "\[Rule]", "10000"}]}], "}"}]}]}], 
    "]"}]}]}], "Input",
- CellChangeTimes->{{3.655204439039626*^9, 3.6552044390431433`*^9}}],
+ CellChangeTimes->{{3.655204439039626*^9, 3.6552044390431433`*^9}, {
+  3.6555673534423103`*^9, 3.655567577118541*^9}}],
 
 Cell["\<\
 Se calcularmos com um par\[AHat]metro (no caso, mu) com uma casa decimal, o \
@@ -169,17 +141,16 @@ Cell[BoxData[
   RowBox[{
   ":", " "}], "\<\"The precision of the argument function \
 (\[NoBreak]\\!\\(\\(6\\\\ p\\^2\\\\ \\(\\(Log[\\(\\(Abs[\\(\\(\\(p\\^2 + \
-\\((7\\/500 + \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\))\\)\\^2 - \
-\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\/\\(p\\^2 \
-+ \[Theta]\\^2 + \\(Plus[\\(\\(\[LeftSkeleton] 2 \
-\[RightSkeleton]\\)\\)]\\)\\^2\\)\\)\\)]\\)\\)]\\)\\)\\)\\/\[Pi]\\^3\\)\
-\[NoBreak]) is less than WorkingPrecision \
+\\((7\\/500 + \\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\^2 - \\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\^2\\)\\/\\(p\\^2 + \[Theta]\\^2 + \\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\)\\)]\\)\\)]\\)\\)\\)\\/\
+\[Pi]\\^3\\)\[NoBreak]) is less than WorkingPrecision \
 (\[NoBreak]\\!\\(40.`\\)\[NoBreak]). \
 \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
 ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/precw\\\", \
 ButtonNote -> \\\"NIntegrate::precw\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.655205355760469*^9, 3.655205977804016*^9, 
-  3.65520898834175*^9}],
+ CellChangeTimes->{3.655567633751059*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -192,8 +163,7 @@ oscillatory integrand, or WorkingPrecision too small. \\!\\(\\*ButtonBox[\\\"\
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/NIntegrate/slwcon\\\", ButtonNote -> \
 \\\"NIntegrate::slwcon\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.655205355760469*^9, 3.655205977804016*^9, 
-  3.655208988654346*^9}],
+ CellChangeTimes->{3.6555676344002323`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -218,16 +188,14 @@ NIntegrate obtained \
 \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
 ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NIntegrate/eincr\\\", \
 ButtonNote -> \\\"NIntegrate::eincr\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.655205355760469*^9, 3.655205977804016*^9, 
-  3.65520904041943*^9}],
+ CellChangeTimes->{3.6555676908697863`*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-  "52.13125800000000253930920735001564025879`7.737698118464963", ",", 
+  "57.01579999999999870397004997357726097107`7.776595135653187", ",", 
    RowBox[{"-", "1.3634554022079478`*^6"}]}], "}"}]], "Output",
- CellChangeTimes->{3.655205416765216*^9, 3.6552062566815863`*^9, 
-  3.655209040556691*^9}]
+ CellChangeTimes->{3.655567691015415*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -259,16 +227,16 @@ Cell[BoxData[
   RowBox[{
   ":", " "}], "\<\"The precision of the argument function \
 (\[NoBreak]\\!\\(\\(6\\\\ p\\^2\\\\ \\(\\(Log[\\(\\(Abs[\\(\\(\\(p\\^2 + \
-\\((7\\/500 + \\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\))\\)\\^2 - \
-\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\/\\(p\\^2 \
-+ \[Theta]\\^2 + \\(Plus[\\(\\(\[LeftSkeleton] 2 \
-\[RightSkeleton]\\)\\)]\\)\\^2\\)\\)\\)]\\)\\)]\\)\\)\\)\\/\[Pi]\\^3\\)\
-\[NoBreak]) is less than WorkingPrecision \
+\\((7\\/500 + \\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\^2 - \\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\^2\\)\\/\\(p\\^2 + \[Theta]\\^2 + \\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\^2\\)\\)\\)]\\)\\)]\\)\\)\\)\\/\
+\[Pi]\\^3\\)\[NoBreak]) is less than WorkingPrecision \
 (\[NoBreak]\\!\\(40.`\\)\[NoBreak]). \
 \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
 ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/precw\\\", \
 ButtonNote -> \\\"NIntegrate::precw\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.655209053368979*^9, 3.655209158574621*^9}],
+ CellChangeTimes->{3.6555676912085867`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -281,15 +249,14 @@ oscillatory integrand, or WorkingPrecision too small. \\!\\(\\*ButtonBox[\\\"\
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/NIntegrate/slwcon\\\", ButtonNote -> \
 \\\"NIntegrate::slwcon\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.655209053368979*^9, 3.65520915901276*^9}],
+ CellChangeTimes->{3.655567691746863*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-  "1.80811300000000008125766726152505725622`6.277825481975891", ",", 
+  "1.94845200000000007278799785126466304064`6.3102896247211895", ",", 
    "3.303315084532712`*^-16"}], "}"}]], "Output",
- CellChangeTimes->{{3.655208654013092*^9, 3.6552086642792788`*^9}, 
-   3.655209055117601*^9, 3.6552091603147697`*^9}]
+ CellChangeTimes->{3.655567693142337*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -322,14 +289,14 @@ oscillatory integrand, or WorkingPrecision too small. \\!\\(\\*ButtonBox[\\\"\
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/NIntegrate/slwcon\\\", ButtonNote -> \
 \\\"NIntegrate::slwcon\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.655209215518701*^9}],
+ CellChangeTimes->{3.655567693727412*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-  "1.9441209999999999880060386203695088625`6.309323204732514", ",", 
+  "2.03451799999999982659915076510515064001`6.3290614498213955", ",", 
    "3.3033151526822036`*^-16"}], "}"}]], "Output",
- CellChangeTimes->{3.655208745238594*^9, 3.655209216941099*^9}]
+ CellChangeTimes->{3.655567695242879*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -358,14 +325,14 @@ oscillatory integrand, or WorkingPrecision too small. \\!\\(\\*ButtonBox[\\\"\
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/NIntegrate/slwcon\\\", ButtonNote -> \
 \\\"NIntegrate::slwcon\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.65520922744956*^9}],
+ CellChangeTimes->{3.655567695856587*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-  "2.14013300000000006306777322606649249792`6.351040676989213", ",", 
+  "2.26533100000000020557422431011218577623`6.375731581425755", ",", 
    "3.3033151526822036`*^-16"}], "}"}]], "Output",
- CellChangeTimes->{3.655209229055675*^9}]
+ CellChangeTimes->{3.655567697570282*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -407,8 +374,7 @@ oscillatory integrand, or WorkingPrecision too small. \\!\\(\\*ButtonBox[\\\"\
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/NIntegrate/slwcon\\\", ButtonNote -> \
 \\\"NIntegrate::slwcon\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.655206606141427*^9, 3.6552066809629908`*^9, 
-  3.655209315723175*^9}],
+ CellChangeTimes->{3.655567698848984*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -421,8 +387,7 @@ oscillatory integrand, or WorkingPrecision too small. \\!\\(\\*ButtonBox[\\\"\
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/NIntegrate/slwcon\\\", ButtonNote -> \
 \\\"NIntegrate::slwcon\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.655206606141427*^9, 3.6552066809629908`*^9, 
-  3.655209316377822*^9}],
+ CellChangeTimes->{3.655567699536552*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -435,8 +400,7 @@ oscillatory integrand, or WorkingPrecision too small. \\!\\(\\*ButtonBox[\\\"\
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/NIntegrate/slwcon\\\", ButtonNote -> \
 \\\"NIntegrate::slwcon\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.655206606141427*^9, 3.6552066809629908`*^9, 
-  3.655209317523528*^9}],
+ CellChangeTimes->{3.655567700735939*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -449,8 +413,7 @@ Cell[BoxData[
 \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
 ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
 ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.655206606141427*^9, 3.6552066809629908`*^9, 
-  3.6552093175589314`*^9}],
+ CellChangeTimes->{3.6555677007690897`*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -686,8 +649,7 @@ Cell[BoxData[
 999986`40.", ",", 
      "0.9780080126093801078737966664104938298299450694720450338263391414049926\
 2711026`39.30102999566399"}], "}"}]}], "}"}]], "Output",
- CellChangeTimes->{3.655206667964511*^9, 3.6552077074520407`*^9, 
-  3.6552113553089943`*^9}]
+ CellChangeTimes->{3.655569443000058*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -858,14 +820,11 @@ aCtY
     FormBox["\"Chemical Potential [GeV]\"", TraditionalForm], 
     FormBox["\"Pressure [GeV^4]\"", TraditionalForm]},
   AxesOrigin->{0, 0},
-  ImageSize->{556., Automatic},
   Method->{},
   PlotRange->{{0, 1.5}, {-0.1, 1}},
   PlotRangeClipping->True,
   PlotRangePadding->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{
-  3.6552077080633907`*^9, 3.655208359725542*^9, {3.655208404083816*^9, 
-   3.6552084113129463`*^9}, 3.6552113555455427`*^9}]
+ CellChangeTimes->{3.655569443715125*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -880,8 +839,14 @@ c\[AAcute]lculos. \
    3.655211178558316*^9}, 3.655213140466638*^9, {3.6552131745704727`*^9, 
    3.655213190747205*^9}, {3.655213243213029*^9, 3.655213266963827*^9}}]
 },
-WindowSize->{740, 867},
-WindowMargins->{{Automatic, 30}, {12, Automatic}},
+WindowSize->{1021, 721},
+WindowMargins->{{-9, Automatic}, {-35, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"PaperOrientation"->"Portrait",
+"PaperSize"->{594.75, 842.25},
+"PostScriptOutputFile"->"/home/rsouza/Dropbox/USP/POS/PROGRAMAS/qcd.ire.eos/\
+print.pdf"},
 FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
 StyleDefinitions->"Default.nb"
 ]
@@ -896,57 +861,50 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 177, 3, 32, "Input"],
-Cell[737, 25, 399, 7, 71, "Text"],
+Cell[557, 20, 177, 3, 31, "Input"],
+Cell[737, 25, 399, 7, 51, "Text"],
+Cell[1139, 34, 502, 14, 112, "Input"],
+Cell[1644, 50, 2266, 65, 169, "Input"],
+Cell[3913, 117, 305, 6, 51, "Text"],
 Cell[CellGroupData[{
-Cell[1161, 36, 343, 8, 121, "Input"],
-Cell[1507, 46, 117, 2, 32, "Output"],
-Cell[1627, 50, 117, 2, 32, "Output"],
-Cell[1747, 54, 140, 3, 49, "Output"],
-Cell[1890, 59, 142, 3, 49, "Output"],
-Cell[2035, 64, 139, 3, 49, "Output"]
+Cell[4243, 127, 372, 7, 31, "Input"],
+Cell[4618, 136, 880, 16, 95, "Message"],
+Cell[5501, 154, 580, 11, 43, "Message"],
+Cell[6084, 167, 1287, 23, 177, "Message"],
+Cell[7374, 192, 216, 5, 37, "Output"]
 }, Open  ]],
-Cell[2189, 70, 2492, 73, 209, "Input"],
-Cell[4684, 145, 305, 6, 51, "Text"],
+Cell[7605, 200, 454, 8, 51, "Text"],
 Cell[CellGroupData[{
-Cell[5014, 155, 372, 7, 32, "Input"],
-Cell[5389, 164, 907, 17, 120, "Message"],
-Cell[6299, 183, 625, 12, 62, "Message"],
-Cell[6927, 197, 1331, 24, 233, "Message"],
-Cell[8261, 223, 265, 6, 37, "Output"]
+Cell[8084, 212, 423, 8, 31, "Input"],
+Cell[8510, 222, 882, 16, 95, "Message"],
+Cell[9395, 240, 578, 11, 43, "Message"],
+Cell[9976, 253, 202, 5, 37, "Output"]
 }, Open  ]],
-Cell[8541, 232, 454, 8, 71, "Text"],
+Cell[10193, 261, 211, 4, 31, "Text"],
 Cell[CellGroupData[{
-Cell[9020, 244, 423, 8, 32, "Input"],
-Cell[9446, 254, 883, 16, 120, "Message"],
-Cell[10332, 272, 599, 11, 62, "Message"],
-Cell[10934, 285, 277, 6, 37, "Output"]
-}, Open  ]],
-Cell[11226, 294, 211, 4, 51, "Text"],
-Cell[CellGroupData[{
-Cell[11462, 302, 473, 9, 32, "Input"],
-Cell[11938, 313, 578, 11, 62, "Message"],
-Cell[12519, 326, 223, 5, 37, "Output"]
+Cell[10429, 269, 473, 9, 31, "Input"],
+Cell[10905, 280, 578, 11, 43, "Message"],
+Cell[11486, 293, 203, 5, 37, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12779, 336, 542, 11, 32, "Input"],
-Cell[13324, 349, 577, 11, 62, "Message"],
-Cell[13904, 362, 202, 5, 37, "Output"]
+Cell[11726, 303, 542, 11, 31, "Input"],
+Cell[12271, 316, 578, 11, 43, "Message"],
+Cell[12852, 329, 202, 5, 37, "Output"]
 }, Open  ]],
-Cell[14121, 370, 165, 3, 31, "Text"],
+Cell[13069, 337, 165, 3, 31, "Text"],
 Cell[CellGroupData[{
-Cell[14311, 377, 698, 19, 77, "Input"],
-Cell[15012, 398, 627, 12, 62, "Message"],
-Cell[15642, 412, 627, 12, 62, "Message"],
-Cell[16272, 426, 627, 12, 62, "Message"],
-Cell[16902, 440, 586, 12, 43, "Message"],
-Cell[17491, 454, 9644, 235, 1742, "Output"]
+Cell[13259, 344, 698, 19, 52, "Input"],
+Cell[13960, 365, 578, 11, 43, "Message"],
+Cell[14541, 378, 578, 11, 43, "Message"],
+Cell[15122, 391, 578, 11, 43, "Message"],
+Cell[15703, 404, 537, 11, 24, "Message"],
+Cell[16243, 417, 9593, 234, 836, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27172, 694, 869, 23, 99, "Input"],
-Cell[28044, 719, 6057, 148, 266, "Output"]
+Cell[25873, 656, 869, 23, 72, "Input"],
+Cell[26745, 681, 5922, 145, 152, "Output"]
 }, Open  ]],
-Cell[34116, 870, 643, 10, 91, "Text"]
+Cell[32682, 829, 643, 10, 71, "Text"]
 }
 ]
 *)

@@ -18,17 +18,65 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 # 02110-1301, USA.
 
+import math
+
+
+class IREQCDParameters:
+
+    def __init__(self, m3, m2, m0, Nf, Nc):
+
+        self.m3 = m3
+        self.m2 = m2
+        self.m0 = m0
+
+        self.Nf = Nf
+        self.Nc = Nc
 
 
 class IREQCDEquations:
     """ IRE QCD equations. """
 
-    def __init__(self, m3, m2, mp):
+    def __init__(self, parameters):
         
-        self.__m3 = m3
-        self.__m2 = m2
-        self.__mp = mp
+        self.__m3 = parameters.m3
+        self.__m2 = parameters.m2
+        self.__m0 = parameters.m0
 
-    def omega_2(self, zeta, p, mp):
+        self.__Nf = parameters.Nf
+        self.__Nc = parameters.Nc
+
+    def omega_2(self, zeta, p):
         
-        return p**2. + (self.__m3/(-zeta + p**2. + self.__m2) + self.__mp)**2.
+        return p**2. + (self.__m0 + (self.__m3/(-zeta + p**2. + self.__m2)))**2.
+
+    def function_f(self, p, theta, mu):
+
+        # print("theta={}, mu={}, p={}".format(theta, mu, p))
+
+        zeta = complex(mu, theta)
+
+        numerator = self.omega_2(zeta**2., p) - zeta**2.
+        denominator = self.omega_2(-theta**2., p) + theta**2.
+
+        modulus = abs(numerator / denominator)
+
+        return p**2. * math.log(modulus).real
+
+    def output_header(self):
+        header_format = \
+            ("#---------------------------------------------------------------------------------------------\n"
+             "#                     QCD IRE EoS\n"
+             "#---------------------------------------------------------------------------------------------\n"
+             "# N_f  : {}\n"
+             "# N_c  : {}\n"
+             "#\n"
+             "# M_3  : {}\n"
+             "# m_2  : {}\n"
+             "# m_0  : {}\n"
+             "#---------------------------------------------------------------------------------------------\n")
+
+        print(header_format.format(self.__Nf,
+                                   self.__Nc,
+                                   self.__m3,
+                                   self.__m2,
+                                   self.__m0))
