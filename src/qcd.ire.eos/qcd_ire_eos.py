@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# qcd_ire_equatios - QCD Infrared Renormalizable Extension EoS
+# qcd_ire_equations - QCD Infrared Renormalizable Extension EoS
 # Copyright (C) 2015 Rodrigo Souza <rsouza01@gmail.com>
 
 # This program is free software; you can redistribute it and/or
@@ -36,17 +36,15 @@
 import sys
 import qcd_ire_equations as qcd_eqs
 
+
 def main(argv):
 
     print("qcd.ire.eos.py")
-    
-    irqqcdeqs = qcd_eqs.IREQCDEquations(m3=196/1000, m2=639/1000, mp=3)
-    
-    
-    print("omega_2 = {}".format(irqqcdeqs.omega_2(1, 1, 1)))
-        
-        
-    
+
+    irq_qcd_eqs = qcd_eqs.IREQCDEquations(m3=196/1000, m2=639/1000, mp=3)
+
+    print("omega_2 = {}".format(irq_qcd_eqs.omega_2(1, 1, 1)))
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])

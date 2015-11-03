@@ -1,6 +1,6 @@
 
 
-# qcd_ire_equatios - QCD Infrared Renormalizable Extension EoS
+# qcd_ire_equations - QCD Infrared Renormalizable Extension EoS
 # Copyright (C) 2015 Rodrigo Souza <rsouza01@gmail.com>
 
 # This program is free software; you can redistribute it and/or
@@ -28,8 +28,7 @@ class IREQCDEquations:
         self.__m3 = m3
         self.__m2 = m2
         self.__mp = mp
-        
 
     def omega_2(self, zeta, p, mp):
         
-        return p**2. + (self.__m3/(-zeta + p^2 + self.__m2) + self.__mp)**2.
+        return p**2. + (self.__m3/(-zeta + p**2. + self.__m2) + self.__mp)**2.
