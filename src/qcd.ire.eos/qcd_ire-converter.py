@@ -23,6 +23,8 @@ import sys
 import os
 import time
 
+import cgs_constants as const
+
 """"
     Assumes data in the following order:
     energy density, pressure, baryon density   
@@ -73,4 +75,8 @@ def main(argv):
 
     
 if __name__ == "__main__":
+    
+    print("__file__ = {}".format(const.__file__))
+    print("const.FM3_TO_CM3 = {}".format(const.FM3_TO_CM3))
+
     main(sys.argv[1:])
